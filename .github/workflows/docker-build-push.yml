@@ -26,4 +26,4 @@ jobs:
 
       - name: Push Docker Image
         run: |
-          docker push ${{ secrets.DOCKERHUB_TOKEN }}/terraform-tools:latest
+          docker push ${{ vars.DOCKERHUB_USERNAME }}/terraform-tools:latest

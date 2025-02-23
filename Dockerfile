@@ -18,4 +18,8 @@ RUN apt-get update && apt-get install -y pre-commit \
 
 WORKDIR /workspace
 
+RUN useradd -m github && mkdir -p /workspace && chown github:github /workspace
+
+USER github
+
 CMD ["bash"]
